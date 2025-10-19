@@ -7,10 +7,12 @@ import Education from "@/components/Education";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Scene3D from "@/components/Scene3D";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
+      <Scene3D />
       <Navbar />
       <Hero />
       <About />

@@ -30,27 +30,27 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 md:px-6 bg-secondary/30">
+    <section id="projects" className="py-20 px-4 md:px-6 relative">
       <div className="container mx-auto">
         <h2 className="section-title text-center">My Projects</h2>
-        <div className="h-1 w-20 bg-gradient-to-r from-primary to-accent mx-auto mb-12 rounded-full"></div>
+        <div className="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full neon-glow"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="glass-card glass-card-hover rounded-2xl p-6 flex flex-col animate-fade-in"
+              className="glass-card glass-card-hover neon-border rounded-2xl p-6 flex flex-col animate-fade-in hover:neon-glow transition-all"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-5xl mb-4">{project.emoji}</div>
-              <h3 className="text-xl font-bold mb-3">{project.title}</h3>
+              <div className="text-5xl mb-4 animate-float">{project.emoji}</div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">{project.title}</h3>
               <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
               
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.techStack.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-2 py-1 bg-primary/10 text-primary rounded text-xs font-medium"
+                    className="px-2 py-1 bg-primary/20 text-primary border border-primary/50 rounded text-xs font-medium hover:bg-primary/30 transition-colors"
                   >
                     {tech}
                   </span>
@@ -59,7 +59,7 @@ const Projects = () => {
 
               <Button
                 variant="outline"
-                className="w-full group"
+                className="w-full group neon-border hover:bg-primary/10 hover:scale-105 transition-all"
                 asChild
               >
                 <a href={project.github} target="_blank" rel="noopener noreferrer">

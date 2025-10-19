@@ -26,12 +26,12 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-card py-3" : "bg-transparent py-4"
+        isScrolled ? "glass-card neon-border py-3" : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-xl md:text-2xl font-bold gradient-text">
+          <a href="#home" className="text-xl md:text-2xl font-bold neon-text">
             Chakramahanti Jawahar
           </a>
 
@@ -41,7 +41,7 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="relative text-sm font-medium text-foreground hover:text-primary transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                className="relative text-sm font-medium text-foreground hover:text-primary transition-colors duration-300 after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left after:shadow-[0_0_10px_hsl(var(--primary))]"
               >
                 {link.name}
               </a>
@@ -50,7 +50,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 neon-border rounded-lg hover:neon-glow transition-all"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
